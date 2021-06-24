@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChessWithClasses
 {
-	public abstract class Figure
+	class Rating
 	{
-
 	}
 }
