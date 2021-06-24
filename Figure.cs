@@ -8,6 +8,6 @@ namespace ChessWithClasses
 {
 	public abstract class Figure
 	{
-
+		public abstract char OneLetter { get; }
 	}
 }
