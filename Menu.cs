@@ -47,6 +47,11 @@ namespace ChessWithClasses
 			if (currentButtonNumber > 3) currentButtonNumber = 0;
 		}
 
+		public void ResetColor()
+		{
+			Console.ForegroundColor = DefaultTextColor;
+		}
+
 		public bool IsRunning()
 		{
 			return isRunning;
