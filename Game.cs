@@ -9,7 +9,7 @@ namespace ChessWithClasses
 	public class Game
 	{
 		private readonly IDrawer drawer;
-		private Menu menu;
+		private readonly Menu menu;
 
 		public Game(IDrawer drawer)
 		{
@@ -56,7 +56,16 @@ namespace ChessWithClasses
 
 		private void StartNewGame()
 		{
-			drawer.DrawNewGame();
+			Console.WriteLine("Enter Player1:");
+			Player player1 = CreatePlayer();
+			Console.WriteLine("Enter Player2:");
+			Player player2 = CreatePlayer();
+		}
+
+		private Player CreatePlayer()
+		{
+			string name = Console.ReadLine();
+			return new Player(name);
 		}
 
 		private void ContinueGame()

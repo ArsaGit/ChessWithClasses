@@ -11,16 +11,10 @@ namespace ChessWithClasses
 		public void Draw(Menu menu)
 		{
 			Console.Clear();
+			string[] buttons = menu.GetButtons();
 
 			Console.WriteLine("Chess\n");
 
-			Print(menu);
-			menu.ResetColor();
-		}
-
-		private void Print(Menu menu)
-		{
-			string[] buttons = menu.GetButtons();
 			for (int i = 0; i < buttons.Length; i++)
 			{
 				if (menu.isCurrentButton(i))
@@ -33,11 +27,13 @@ namespace ChessWithClasses
 				}
 				Console.WriteLine(buttons[i]);
 			}
+
+			menu.ResetColor();
 		}
 
 		public void DrawNewGame()
 		{
-			Console.WriteLine("Тут однажды будет New game");
+			
 		}
 
 		public void DrawContinueGame()

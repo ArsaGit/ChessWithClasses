@@ -33,9 +33,11 @@ namespace ChessWithClasses
 			switch (chInput.Key)
 			{
 				case ConsoleKey.UpArrow:
+				case ConsoleKey.W:
 					currentButtonNumber--;
 					break;
 				case ConsoleKey.DownArrow:
+				case ConsoleKey.S:
 					currentButtonNumber++;
 					break;
 				case ConsoleKey.Enter:
