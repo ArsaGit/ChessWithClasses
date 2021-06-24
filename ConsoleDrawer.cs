@@ -68,9 +68,9 @@ namespace ChessWithClasses
 			DrawBoardNotation();
 			Console.SetCursorPosition(indent, indent + 16);			//это тут из-за того,
 			Console.Write("└");										//что почему-то не прогружается самая нижняя граница
-			Console.SetCursorPosition(indent + 1, indent + 16);
+			Console.SetCursorPosition(indent + 1, indent + 16);		//
 			Console.Write("─");
-		}
+		}	 
 
 		private void DrawBorders()
 		{
