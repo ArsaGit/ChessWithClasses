@@ -6,7 +6,8 @@ namespace ChessWithClasses
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			Game chess = new Game(new ConsoleDrawer());
+			chess.Run();
 		}
 	}
 }

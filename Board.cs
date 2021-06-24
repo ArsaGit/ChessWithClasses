@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChessWithClasses
 {
-	class Board
+	public class Board
 	{
 	}
 }

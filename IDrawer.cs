@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ChessWithClasses
 {
-	public class Match
+	public interface IDrawer
 	{
+		//void Draw(Game game);
+		void Draw(Menu menu);
 	}
 }
