@@ -58,8 +58,10 @@ namespace ChessWithClasses
 		{
 			Console.WriteLine("Enter Player1:");
 			Player player1 = CreatePlayer();
-			Console.WriteLine("Enter Player2:");
-			Player player2 = CreatePlayer();
+			//Console.WriteLine("Enter Player2:");
+			//Player player2 = CreatePlayer();
+			Match match = new Match(drawer, player1);
+			match.Draw();
 		}
 
 		private Player CreatePlayer()

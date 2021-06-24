@@ -10,9 +10,10 @@ namespace ChessWithClasses
 	{
 		//void Draw(Game game);
 		void Draw(Menu menu);
-		public void DrawNewGame();
-		public void DrawContinueGame();
-		public void DrawRating();
-		public void DrawExit();
+		void DrawNewGame();
+		void DrawContinueGame();
+		void DrawRating();
+		void DrawExit();
+		void Draw(Match match);
 	}
 }
