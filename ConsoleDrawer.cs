@@ -10,12 +10,24 @@ namespace ChessWithClasses
 	{
 		public void Draw(Menu menu)
 		{
+			Console.Clear();
+			Console.ForegroundColor = ConsoleColor.White;
+
+			Console.WriteLine("Chess\n");
+
 			string[] buttons = menu.GetButtons();
 			for(int i = 0;i<buttons.Length;i++)
 			{
+				if(menu.isCurrentButton(i))
+				{
+					Console.ForegroundColor = menu.GetSelectedColor();
+				}
+				else
+				{
+					Console.ForegroundColor = menu.GetDefaultTextColor();
+				}
 				Console.WriteLine(buttons[i]);
 			}
 		}
-
 	}
 }

@@ -15,11 +15,41 @@ namespace ChessWithClasses
 							"Exit"};
 
 		private int currentButtonNumber = 0;
+
+		private bool isRunning = true;
+
 		private const ConsoleColor SelectedColor = ConsoleColor.Green;
+		private const ConsoleColor DefaultTextColor = ConsoleColor.White;
 
 		public Menu(IDrawer drawer)
 		{
 			this.drawer = drawer;
+		}
+
+		public void SelectButton()
+		{
+			ConsoleKeyInfo chInput = Console.ReadKey();
+
+			switch (chInput.Key)
+			{
+				case ConsoleKey.UpArrow:
+					currentButtonNumber--;
+					break;
+				case ConsoleKey.DownArrow:
+					currentButtonNumber++;
+					break;
+				case ConsoleKey.Enter:
+					isRunning = false;
+					break;
+			}
+
+			if (currentButtonNumber < 0) currentButtonNumber = 3;
+			if (currentButtonNumber > 3) currentButtonNumber = 0;
+		}
+
+		public bool IsRunning()
+		{
+			return isRunning;
 		}
 
 		public void Draw()
@@ -40,6 +70,15 @@ namespace ChessWithClasses
 		public ConsoleColor GetSelectedColor()
 		{
 			return SelectedColor;
+		}
+		public ConsoleColor GetDefaultTextColor()
+		{
+			return DefaultTextColor;
+		}
+
+		public bool isCurrentButton(int i)
+		{
+			return currentButtonNumber == i;
 		}
 	}
 }
